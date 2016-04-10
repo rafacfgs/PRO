@@ -1,57 +1,53 @@
-package FORMAS_GEOMÉTRICAS;
+package sonia;
 
-import java.util.Scanner;
+/* Crear una clase Punto que tenga:
+	o Dos atributos private de tipo double (x e y)
+	o Un constructor con dos parámetros de tipo double que inicialicen los atributos
+	o Un constructor por defecto sin parámetros que inicialice a 0
+	o Los setter y getter correspondientes
+	o Un método calcularDistanciaDesde(Punto param_punto), que reciba un objeto
+	Punto como parámetro y devuelva un double que sea la distancia a dicho punto*/
 
 public class Punto {
 
-	//Definimos los atributos:
-	
 	private double x;
 	private double y;
 	
-	//Creamos constructores:
 	
-	Punto(double x, double y){//Inicializan los atributos
-		setx(x);
-		sety(y);
-	}
-	
-	Punto(){//Inicializa a 0
-	
-	}
-	
-	//Creamos los setter (asignan):
-	
-	public void setx(double x)	{
-		this.x = x;
-	}
-	
-	public void sety(double y)	{
-		this.y = y;
-	}
-	
-	//Creamos los getter (obtienen):
+	public Punto(double puntox, double puntoy){//constructor con argumentos
+		x = puntox;
+		y = puntoy;
+				}
+				   
+	public Punto(){// constructor sin argumentos 
+		}
 	
 	public double getx()	{
-		return x;
+	      // retorna el valor de la variable x
+	return x;
 	}
-	
+	public void setx(double x){
+	      // asigna el valor del parametro a la variable x 
+	this.x = x;
+	}
 	public double gety()	{
-		return y;
+	return y;// retorna el valor de la variable y
+	}
+	public void sety(double y)	{
+	this.y = y; // asigna el valor del parametro a la variable y 
 	}
 	
-	//Creamos un método:
 	
-	public static double calcularDistanciaDesde (Punto pto){
+	public double calcularDistanciaPunto(Punto p){
 		double distancia;
-		double x1 = pto.getx();
-		double y1 = pto.gety();
-		
-		distancia = Math.sqrt(Math.pow((this.x - x1), 2) + Math.pow((this.y - y1), 2));
-		
-		System.out.println ("x1: "+x1+" x2: "+this.x+" y1: "+y1+" y2: "+this.y);
+		double px=p.getx();
+		double py=p.gety();
+		distancia=Math.sqrt((Math.pow((px-this.x),2))+(Math.pow((py-this.y),2)));
 		
 		return distancia;
 	}
-
-}//END CLASS
+	
+	
+	
+	
+}

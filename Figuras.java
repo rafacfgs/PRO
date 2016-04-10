@@ -1,4 +1,4 @@
-package FORMAS_GEOMÉTRICAS;
+package sonia;
 
 import java.util.Scanner;
 
@@ -36,7 +36,7 @@ public class Figuras {
 		
 		System.out.println ("Punto 1: ("+x1+", "+y1+")\nPunto 2: ("+x2+", "+y2+")");
 		
-		distancia = pto1.calcularDistanciaDesde (pto2);
+		distancia = pto1.calcularDistanciaPunto (pto2);
 		
 		System.out.println ("Distancia entre Punto 1 y Punto 2 = "+distancia);
 		
